@@ -14,8 +14,7 @@ var foundationRoutes = null;
     'Aerobatic'
   ])
     .config(config)
-    .run(run)
-  ;
+    .run(run);
 
   config.$inject = ['$urlRouterProvider', '$locationProvider', '$FoundationStateProvider', 'aerobaticProvider'];
 
@@ -41,5 +40,4 @@ var foundationRoutes = null;
   function run() {
     FastClick.attach(document.body);
   }
-
 })();

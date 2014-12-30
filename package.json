@@ -1,5 +1,5 @@
 {
-  "name": "foundation-apps-test",
+  "name": "foundation-apps-template",
   "version": "1.0.2",
   "scripts": {
     "start": "gulp",
@@ -23,7 +23,6 @@
     "stream-series": "^0.1.1",
     "through2": "^0.6.3"
   },
-  "private": true,
   "_aerobatic": {
     "appId": "W1Fu-mQCu",
     "baseDirs": {

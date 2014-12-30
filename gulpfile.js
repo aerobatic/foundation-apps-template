@@ -14,10 +14,11 @@ var gulp           = require('gulp'),
     sass           = require('gulp-ruby-sass'),
     uglify         = require('gulp-uglify'),
     concat         = require('gulp-concat'),
-    gulpFile       = require('gulp-file'),
     rename         = require('gulp-rename'),
     series         = require('stream-series'),
     path           = require('path');
+    path           = require('path'),
+    dynamicRouting = require('./bower_components/foundation-apps/bin/gulp-dynamic-routing');
 
 // 2. SETTINGS VARIABLES
 // - - - - - - - - - - - - - - -
@@ -62,7 +63,11 @@ gulp.task('copy', function() {
   gulp.src('./bower_components/foundation-apps/iconic/**/*')
     .pipe(gulp.dest('./build/assets/img/iconic/'));
 
-  // // Foundation's Angular partials
+  // Iconic SVG icons
+  gulp.src('./bower_components/foundation-apps/iconic/**/*')
+    .pipe(gulp.dest('./build/assets/img/iconic/'));
+
+  // Foundation's Angular partials
   return gulp.src(['./bower_components/foundation-apps/js/angular/components/**.*'])
     .pipe(gulp.dest('./build/components/'));
 });
@@ -129,7 +134,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./build/assets/css/'));
 });
 
-// Compiles and copies the Foundation for Apps JavaScript, as well as your app's custom JS
+// Compiles and copies your app's custom JS
 gulp.task('uglify', function() {
   // App JavaScript
   return gulp.src(appJS)
