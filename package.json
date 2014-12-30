@@ -1,0 +1,37 @@
+{
+  "name": "foundation-apps-test",
+  "version": "1.0.2",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "connect-modrewrite": "^0.7.9",
+    "front-matter": "^0.2.0",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-concat": "^2.4.2",
+    "gulp-connect": "^2.2.0",
+    "gulp-file": "^0.2.0",
+    "gulp-front-matter": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-uglify": "^1.0.2",
+    "gulp-util": "^3.0.1",
+    "rimraf": "^2.2.8",
+    "run-sequence": "^1.0.2",
+    "stream-series": "^0.1.1",
+    "through2": "^0.6.3"
+  },
+  "private": true,
+  "_aerobatic": {
+    "appId": "W1Fu-mQCu",
+    "baseDirs": {
+      "debug": "client",
+      "release": "build"
+    }
+  },
+  "dependencies": {
+    "angular-aerobatic": "^1.0.4"
+  }
+}

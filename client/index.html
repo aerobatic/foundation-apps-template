@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Angular</title>
+    <link data-aero-build="debug" href="bower_components/foundation-apps/foundation-built.css" rel="stylesheet" type="text/css">
+
+    <link data-aero-build="release" href="assets/css/foundation.min.css" rel="stylesheet" type="text/css">
+    <link data-aero-build="release" href="assets/css/app.min.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div data-aero-build="debug">
+      <script src="bower_components/foundation-apps/foundation-built.js"></script>
+      <script src="node_modules/angular-aerobatic/angular-aerobatic.js"></script>
+      <script data-aero-build="debug" src="/assets/js/app.js"></script>
+    </div>
+    <div data-aero-build="release">
+      <script src="/assets/js/vendor.min.js"></script>
+      <script src="/assets/js/app.min.js"></script>
+    </div>
+
+    <!--
+    <script src="/assets/js/routes.js"></script>
+     -->
+
+    <div class="grid-frame vertical">
+      <div class="grid-content shrink" style="padding: 0;">
+        <ul class="primary condense menu-bar">
+          <li><a><strong>Foundation for Apps</strong></a></li>
+          <li><a ui-sref="home">Home</a></li>
+          <li><a ui-sref="home">About</a></li>
+          <li><a ui-sref="home">News</a></li>
+          <li><a ui-sref="home">Contact</a></li>
+        </ul>
+      </div>
+      <div class="grid-content">
+        <div class="grid-container">
+          <div ng-class="['ui-animation']" ui-view></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
